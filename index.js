@@ -144,10 +144,14 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
+let filteredArray = [];
+function filterByWord(flavorList, filter) {
+  for (let i = 0; i < flavorList.length; i++) {
+    if (flavorList[i].includes(filter) === true) {
+      filteredArray.push(flavorList[i]);
+    }
+  }
+  return filteredArray;
 }
 
 
